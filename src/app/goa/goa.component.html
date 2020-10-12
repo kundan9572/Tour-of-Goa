@@ -1,0 +1,9 @@
+
+<h2>Goa Tour Invities</h2>
+<ul class="goa">
+    <li *ngFor = "let goa of goa" [class.selected]='goa === selectedGoa' (click)="onSelect(goa)">
+        <span class="badge">{{goa.id}}</span> {{ goa.name}}
+    </li>
+</ul>
+
+<app-goa-detail [goa]= "selectedGoa"></app-goa-detail>
